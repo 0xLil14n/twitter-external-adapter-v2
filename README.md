@@ -1,4 +1,4 @@
-#Twitter API External Adapter
+# Twitter API External Adapter
 
 #### description
 this is a chainlink external adapter used to verify twitter someone's handle
