@@ -42,6 +42,10 @@ const createRequest = async (input, callback) => {
         .then(user => {
             const username = user.data.username
             if(response.data.text.includes(verificationString) && username.toLowerCase() === twitterHandle.toLowerCase()){
+                response = {
+                    ...response,
+                    ...user
+                }
                 callback(200, Requester.success(jobRunID, response));
             } else {
                 callback(500, Requester.errored(jobRunID, "Did not validate"))
